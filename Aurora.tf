@@ -4,8 +4,8 @@ resource "aws_rds_cluster" "aurora_cluster" {
   cluster_identifier      = "aurora-db-cluster"
   engine                  = "aurora-mysql"
   engine_version          = "8.0.mysql_aurora.3.05.2"
-  master_username         = "mihail"
-  master_password         = "mihailpassword!"
+  master_username         = "*"
+  master_password         = "*"
   backup_retention_period = 5
   preferred_backup_window = "07:00-09:00"
   db_subnet_group_name    = aws_db_subnet_group.aurora_subnet_grp.id
